@@ -1,0 +1,292 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+/*
+ * Globals
+ */
+
+body {
+  font-family: "Open Sans", Georgia, "Times New Roman", Times, serif;
+  color: #fff;
+  background-color: #000;
+}
+a,
+a:visited,
+a:active {
+  color: rgb(187, 43, 43);
+  font-weight: bold;
+  transition: 0.2s;
+}
+a:hover {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: none;
+}
+.more-anchor {
+  text-align: center;
+  width: 100%;
+  font-size: 2rem;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/*
+ * Masthead for nav
+ */
+
+.masthead {
+  background-color: #fff;
+}
+.menu-main-nav-container {
+  flex: 1;
+}
+#menu-main-nav {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+@media (min-width: 800px) {
+  .fas.hamburger {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .masthead {
+    font-size: 2rem;
+    background-color: black;
+  }
+  .masthead .container {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .fas.hamburger {
+    transition: 0.5s;
+    margin-right: 0;
+  }
+  nav.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: -100%;
+    height: 100%;
+    background-color: #fff;
+    transition: 0.5s;
+    font-size: 1rem;
+    text-align: right;
+    z-index: 2;
+  }
+  nav.nav.show {
+    margin-right: 0;
+  }
+  ul.menu {
+    flex-direction: column;
+  }
+}
+
+/*
+ * Nav buttons
+ */
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+  color: #cdddeb;
+}
+.menu-main-nav-container li {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  font-weight: 500;
+}
+.menu-main-nav-container li a,
+.menu-main-nav-container li a:active,
+.menu-main-nav-container li a:visited {
+  padding: 1rem;
+  color: #000;
+  transition: 0.4s;
+}
+.menu-main-nav-container li a:hover {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+}
+
+/*
+ * Structure
+ */
+
+.wrapper {
+}
+.wp-block-group .wp-block-column {
+  margin: 2rem auto;
+}
+.not-frontpage {
+  margin-top: 3rem;
+}
+@media (max-width: 800px) {
+  .frontpage h1,
+  .frontpage h1 + p {
+    padding: 2rem;
+  }
+  .frontpage > .wp-block-group {
+    padding: 0 2rem;
+  }
+  .not-frontpage .has-white-background-color,
+  .not-frontpage .has-black-background-color {
+    padding: 0 2rem;
+  }
+  footer p {
+    padding: 2rem;
+  }
+}
+
+/*
+ * Footer
+ */
+footer {
+  width: 100%;
+  color: #666;
+  text-align: center;
+}
+footer a {
+  color: #666;
+  font-weight: normal;
+}
+footer a:visited {
+  color: #666;
+}
+footer a:hover {
+  color: #fff;
+}
+.footer-logo {
+  padding: 4rem;
+}
+
+/*
+ * Frontpage
+ */
+.frontpage {
+  z-index: 1;
+}
+.frontpage h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+.frontpage h1:after {
+  margin-left: 0.5rem;
+  content: url(../images/logo.png);
+}
+.frontpage h1 + p {
+  margin: auto;
+  width: 650px;
+  max-width: 100%;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("../images/hands.jpg");
+  background-repeat: no-repeat;
+}
+@media (max-width: 800px) {
+  .background {
+    background-size: contain;
+    background-position: bottom center;
+  }
+}
+#accent-alt-preceeding {
+  padding-bottom: 5rem;
+}
+#accent-alt img {
+  margin-top: -161px;
+}
+
+/*
+*   Contact
+*/
+.map {
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+/*
+*  Members
+*/
+.member-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.form-group {
+  width: 340px;
+}
+.form-control {
+  border-radius: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 7px solid #be0000;
+  display: inline-block;
+  color: #be0000;
+  background: none;
+}
+.form-control:focus {
+  color: #be0000;
+  background-color: #000;
+  border-color: unset;
+  outline: 0;
+  box-shadow: none;
+}
+.video-link {
+  margin: 1rem 0;
+  display: inline-block;
+}
+.video-list {
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+  transition: 0.5s;
+  overflow: hidden;
+}
+li.categories {
+  font-size: 0;
+}
+li.categories ul {
+  padding-left: 23px;
+  font-size: 1rem;
+}
+.video-list-title {
+  border-bottom: 3px solid #be0000;
+  padding-bottom: 2rem;
+}
+@media (max-width: 800px) {
+  .video-list-title {
+    margin-top: 2rem;
+    border-top: 3px solid #be0000;
+    padding-top: 2rem;
+  }
+}
+iframe {
+  width: 100%;
+}
